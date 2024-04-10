@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import Heading from "@/app/Component/Heading";
 import { getReview, getSlugs } from "@/lib/review";
