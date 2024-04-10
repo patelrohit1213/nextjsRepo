@@ -1,1 +1,2 @@
-# nextjsRepo
+# Next-JsProject
+Learning NextJs
