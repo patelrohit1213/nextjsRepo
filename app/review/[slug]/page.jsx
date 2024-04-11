@@ -1,19 +1,22 @@
+import  React from "react"
 import Link from "next/link";
 import Heading from "@/app/Component/Heading";
 import { getReview, getSlugs } from "@/lib/review";
 import ShareButton from "@/app/Component/ShareButton";
 
 
-export async function generateMetadata({params:{slug}}){
-   const review = await getReview(slug)
-   return{
-    title : review.title
-   }
-}
-export  async function generateStsticParams(){
+
+export  async function generateStaticParams(){
     const slugs = await getSlugs()
     return slugs.map((slug)=>({slug}))
 }
+
+export async function generateMetadata({params:{slug}}){
+    const review = await getReview(slug)
+    return{
+     title : review.title
+    }
+ }
 
 export default async function Reviewpage({params: {slug}}) {
     const review = await getReview(slug);
