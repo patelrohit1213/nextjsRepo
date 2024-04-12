@@ -16,12 +16,10 @@ export default async function Homnepage() {
             <p className="pl-3 text-center font-extralight text-lg">
                 only the best indie game
             </p>
-            <div className=" bg-white border rounded shadow hover:shadow-xl sm:w-full">
-                <Link href={`/review/${review.slug}`}
-                className="flex flex-col sm:flex-row"
-                >
-                    <img src={review.image} height="100px" width="200px" className="rounded sm:rounded-l sm:rounded-r-none" />
-                    <h2 className="font-semibold  font-orbitron py-1 text-center sm:px-2">
+            <div className="item-center justify-center flex">
+                <Link href={`/review/${review.slug}`} >
+                    <img src={review.image} height={100} width={300}  />
+                    <h2 className="font-semibold bg-white w-[300px] font-orbitron py-1 text-center sm:px-2 hover:shadow-xl">
                         {review.title}
                     </h2>
 

@@ -26,7 +26,7 @@ export default async function Reviewpage({params: {slug}}) {
                 {review.title}
             </Heading>
             <Link href="/review" className="hover:underline">Back to Home</Link>
-            <div className="flex gap-3 items-baseline">
+            <div className="flex flex-row gap-3 items-baseline">
              <p className="italic pb-2 pt-2">
                 {review.date}
             </p>
